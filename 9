@@ -1,0 +1,21 @@
+#armstrong number
+num = int(input("enter number"))
+original_num = num  
+count = 0
+while num > 0:
+    num = num // 10
+    count += 1
+
+num = original_num
+pow = count
+b = 0
+while num > 0:
+    digit = num % 10
+    a = digit ** pow
+    b = b + a
+    num = num // 10
+    count -= 1
+if b==original_num:
+    print("armstorng number")
+else:
+    print("not armstrong number")
