@@ -1,0 +1,10 @@
+#Write a program to check two strings are anagrams
+str1=input("enter string: ")
+str2=input("enter string: ")
+def are_anagrams(s1, s2):
+    return sorted(s1) == sorted(s2)
+if are_anagrams(str1, str2):
+    print("Both strings are anagrams")
+else:
+    print("Not anagrams")
+        

@@ -1,0 +1,12 @@
+#factors
+a=int(input("enter no."))
+n=int(a/2)
+flag=True
+for i in range(2,n+1):
+    if a%i==0:
+        print(i)
+    else:
+        flag=False
+if flag==False:
+    print(a)
+    
