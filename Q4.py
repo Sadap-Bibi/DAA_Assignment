@@ -1,14 +1,9 @@
-# The isBadVersion API is already defined for you.
-# def isBadVersion(version: int) -> bool:
-
 class Solution:
-    def firstBadVersion(self, n: int) -> int:
-        left, right = 1, n
-    
-        while left < right:
-            mid = left + (right - left) // 2
-            if isBadVersion(mid):
-                right = mid  
-            else:
-                left = mid + 1 
-        return left 
+    def average(self, salary: list[int]) -> float:
+        min_salary = min(salary)
+        max_salary = max(salary)
+        total_salary = sum(salary)
+        total_salary -= min_salary
+        total_salary -= max_salary
+        n = len(salary) - 2
+        return total_salary / n
